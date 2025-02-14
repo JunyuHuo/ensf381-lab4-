@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lab4 – Exercise 1</title>
+    </head>
+    <body>
+        <h1>JavaScript Lab</h1>
+        <script>
+            // Declaring Functions
+            /*function add(num1, num2)
+            {
+                let sum = num1 + num2;
+                return sum;
+            }*/
+            /*function sub(sub1, sub2){
+                let difference = sub1 - sub2;
+                return difference;
+            }
+            console.log(`Add Function Result: ${add(8, 6)}`);
+            console.log(`Subtract Function Result: ${sub(4, 3)}`);*/
+
+
+            // Using Default Parameters
+            /*function add(num1, num2 = 5)
+            {
+                let sum = num1 + num2;
+                return sum;
+            }
+            function sub(sub1, sub2 = 1){
+                let difference = sub1 - sub2;
+                return difference;
+            }
+            console.log(`Modified Add Function Result: ${add(8)}`);
+            console.log(`Modified Subtract Function Result: ${sub(4)}`);
+            */
+
+
+            // Implementing Arrow Functions
+            let add = (num1, num2 = 5) => num1 + num2;
+            let sub = (sub1, sub2 = 1) => sub1 - sub2;
+            let multiply = (num1, num2) => num1 * num2;
+            let divide = (num1, num2) => {
+                if (num2 === 0) {
+                    return "Cannot divide by 0.";
+                }
+                return num1 / num2;
+            };
+            console.log(add(15));          
+            console.log(sub(20));    
+            console.log(multiply(5, 2)); 
+            console.log(divide(6, 3));     
+            console.log(divide(10, 0));    
+
+            
+            // Understanding Callback Functions
+            function calculator(num1, num2, callback){
+                let result = callback(num1, num2);
+                displayResult(result);
+            }
+            function displayResult(answer){
+                console.log(`The result is ${answer}.`)
+            }
+            calculator(20, 5, add);       
+            calculator(5, 3, multiply);   
+        </script>
+    </body>
+</html>
